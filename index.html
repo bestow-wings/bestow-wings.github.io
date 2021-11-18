@@ -20,7 +20,6 @@ var game = new Chess()
   console.log("Loading model...")
   model = await tf.loadGraphModel(path)
   console.log("Model loaded.")
-  console.log(model.summary())
   return model
 }
 
