@@ -24,11 +24,14 @@ var game = new Chess()
 }
 
 async function predict_move (board) {
-  //
+  var board_state = game.SQUARES
+  for (var key in board_state) {
+    console.log(board_state[key])
+  }
   return null
 }
 
-var chessmodel = load_model("web_model/model.json")
+// var chessmodel = load_model("web_model/model.json")
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
@@ -59,7 +62,7 @@ function onDrop (source, target) {
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
   board.position(game.fen())
-  // predict_move(board)
+  predict_move(board)
 }
 
 var config = {
