@@ -20,7 +20,13 @@ var game = new Chess()
   console.log("Loading model...")
   model = await tf.loadGraphModel(path)
   console.log("Model loaded.")
+  console.log(model.summary())
   return model
+}
+
+async function predict_move (board) {
+  //
+  return null
 }
 
 var chessmodel = load_model("web_model/model.json")
@@ -54,17 +60,7 @@ function onDrop (source, target) {
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
   board.position(game.fen())
-  $.ajax(
-      {
-        type: "POST",
-        url: "http://localhost:8000",
-        data: game.fen(),
-        success: function(data, status, xhr) {
-          board.position(data)
-          game.load(data)
-        }
-      }
-    );
+  // predict_move(board)
 }
 
 var config = {
