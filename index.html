@@ -75,8 +75,10 @@ async function predict_move (model, game) {
     }
   }
 
+  for (var array in squares_dict) {
+    squares_dict[array] = tf.tensor(squares_dict[array])
+  }
   console.log(model.predict(squares_dict))
-
 }
 
 var chessmodel = load_model("web_model/model.json")
