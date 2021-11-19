@@ -15,7 +15,7 @@
 <script>
 var board = null
 var game = new Chess()
-console.log("update 3")
+console.log("update 4")
 
  async function load_model (path) {
   console.log("Loading model...")
@@ -76,7 +76,7 @@ async function predict_move (model, game) {
   }
 
   for (var array in squares_dict) {
-    var as_tensor = tf.tensor([squares_dict[array]])
+    var as_tensor = tf.tensor([[squares_dict[array]]])
     console.log(as_tensor.shape)
     squares_dict[array] = as_tensor
   }
