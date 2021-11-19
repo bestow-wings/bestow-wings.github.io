@@ -76,7 +76,8 @@ async function predict_move (model, game) {
   }
 
   for (var array in squares_dict) {
-    var as_tensor = tf.tensor([[squares_dict[array]]])
+    var as_tensor = tf.tensor([squares_dict[array]])
+    as_tensor.reshape(20,1)
     console.log(as_tensor.shape)
     squares_dict[array] = as_tensor
   }
