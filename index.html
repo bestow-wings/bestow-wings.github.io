@@ -15,7 +15,7 @@
 <script>
 var board = null
 var game = new Chess()
-console.log("update 5")
+console.log("update 6")
 
  async function load_model (path) {
   console.log("Loading model...")
@@ -30,9 +30,9 @@ async function predict_move (model, game) {
 
   var colour_to_move = game.turn()
   if (colour_to_move == 'w') {
-    colour_to_move = true
+    colour_to_move = 1.0
   } else {
-    colour_to_move = false
+    colour_to_move = 0.0
   }
 
   for (var key in game.SQUARES) {
