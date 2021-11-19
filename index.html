@@ -23,15 +23,63 @@ var game = new Chess()
   return model
 }
 
-async function predict_move (board) {
-  var board_state = game.SQUARES
-  for (var key in board_state) {
-    console.log(board_state[key])
+async function predict_move (model, game) {
+
+  var squares_dict = {}
+  var legal_moves = game.moves({verbose: true})
+
+  var colour_to_move = game.turn()
+  if (colour_to_move == 'w') {
+    colour_to_move = true
+  } else {
+    colour_to_move = false
   }
-  return null
+
+  for (var key in game.SQUARES) {
+
+    var square_name = game.SQUARES[key]
+
+    var piece = game.get(square_name)
+    if (piece == null) {
+      piece = null
+    } else {
+      if (piece.color == 'b') {
+        piece = piece.type
+      } else { // piece is a white piece so it needs to be uppercase
+        piece = piece.type.toUpperCase()
+      }
+    }
+
+    squares_dict[square_name] = []
+    squares_dict["from_" + square_name] = []
+    squares_dict["to_" + square_name] = []
+    squares_dict["colour_to_move"] = []
+
+    for (var i in legal_moves) {
+      var move = legal_moves[i]
+      squares_dict[square_name].push(piece)
+      squares_dict["colour_to_move"].push(colour_to_move)
+
+      if (move.from == square_name) {
+        squares_dict["from_" + square_name].push(1.0)
+      } else {
+        squares_dict["from_" + square_name].push(0.0)
+      }
+      
+      if (move.to == square_name) {
+        squares_dict["to_" + square_name].push(1.0)
+      } else {
+        squares_dict["to_" + square_name].push(0.0)
+      }
+
+    }
+  }
+
+  console.log(model.predict(squares_dict))
+
 }
 
-// var chessmodel = load_model("web_model/model.json")
+var chessmodel = load_model("web_model/model.json")
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
@@ -62,7 +110,7 @@ function onDrop (source, target) {
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
   board.position(game.fen())
-  predict_move(board)
+  predict_move(model, game)
 }
 
 var config = {
