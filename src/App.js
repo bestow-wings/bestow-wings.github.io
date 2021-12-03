@@ -50,14 +50,19 @@ const services = [
 
 function App() {
   return (
-    <div style={{width: "75%", justifyContent: "center", margin: "auto"}}>
-      <Navbar />
-      <Hero />
-      <Cards data={projects} />
-      <p>Some information</p>
-      <Cards data ={services} />
-      <p>Hello, world</p>
+    <div>
+      <div>
+        <Navbar />
+      </div>
+      <div style={{width: "75%", justifyContent: "center", margin: "auto"}}>
+        <Hero />
+        <Cards data={projects} />
+        <p>Some information</p>
+        <Cards data ={services} />
+        <p>Hello, world</p>
+      </div>
     </div>
+  
   );
 }
 

@@ -1,7 +1,7 @@
 const Heading = () => {
     return (
         <h1>
-            Some big text
+            Let your people do people work.
         </h1>
 
     )
