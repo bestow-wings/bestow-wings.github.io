@@ -1,49 +1,71 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Devanagari");
 
+:root{
+    --russian-violet:#320E3B;
+    --bittersweet:#F87060;
+    --platinum:#E7E7E7;
+    --viridian-green:#32908F;
+    --ebony:#545C52
+}
+
 .navbar {
-    background-color: forestgreen;
+    background-color: var(--platinum);
     text-align: center;
     line-height: 50px;
-    color:white;
+    color:var(--ebony);
     height: 50px;
 }
 
 .hero {
     padding: 3em;
     padding-bottom: 7em;
-    background-color: mediumorchid;
+    padding-left: 25%;
+    background-color: var(--bittersweet);
 }
 
 .cards {
-    padding: 0.5em;
-    background-color: khaki;
+    padding: 3em;
     display: flex;
     margin: auto;
     justify-content: space-evenly;
-    color: lightgray;
 }
 
 .card {
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    background-color: gray;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    padding-left: 8em;
+    padding-right: 8em;
+    background-color: var(--viridian-green);
     text-align: center;
+    color:var(--platinum);
+    box-shadow: 0px 5px 5px var(--ebony);
+    border-radius: 20px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 0px 10px 15px var(--ebony);
 }
 
 body {
     font-family: 'IBM Plex Sans Devanagari', serif;
     margin:0;
+    color:var(--ebony);
+    background-color: var(--platinum);
 }
 
 button {
-    background-color: lime;
+    background-color: var(--russian-violet);
     padding: 0.5em 3em;
-    border: 0;
     transition: all 0.1s;
     cursor: pointer;
+    color:var(--platinum);
+    border-color: var(--russian-violet);
+    border-radius: 15px;
 }
 button:hover {
-    background-color: limegreen;
+    background-color: var(--platinum);
+    color: var(--russian-violet);
+    border-color: var(--russian-violet);
+    border-width: 2px;
 }

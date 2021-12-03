@@ -54,8 +54,8 @@ function App() {
       <div>
         <Navbar />
       </div>
-      <div style={{width: "75%", justifyContent: "center", margin: "auto"}}>
         <Hero />
+        <div style={{width: "75%", justifyContent: "center", margin: "auto"}}>
         <Cards data={projects} />
         <div style={{textAlign: "center"}}>
           <p>Some information</p>
