@@ -14,13 +14,28 @@
     line-height: 50px;
     color:var(--ebony);
     height: 50px;
+    display: flex;
+    width: 75%;
+}
+
+.navbar-btn {
+    cursor:pointer;
+    background-color: transparent;
+    color: var(--ebony);
+    border: 0;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+.navbar-btn:hover {
+    color:var(--russian-violet);
 }
 
 .hero {
     padding: 3em;
     padding-bottom: 7em;
     padding-left: 25%;
-    background-color: var(--bittersweet);
+    background-color: var(--russian-violet);
+    color: var(--platinum);
 }
 
 .cards {
@@ -55,17 +70,19 @@ body {
 }
 
 button {
-    background-color: var(--russian-violet);
+    background-color: var(--bittersweet);
     padding: 0.5em 3em;
     transition: all 0.1s;
     cursor: pointer;
     color:var(--platinum);
-    border-color: var(--russian-violet);
+    border-color: var(--bittersweet);
     border-radius: 15px;
+    border-style:solid;
 }
+
 button:hover {
     background-color: var(--platinum);
-    color: var(--russian-violet);
-    border-color: var(--russian-violet);
+    color: var(--bittersweet);
+    border-color: var(--bittersweet);
     border-width: 2px;
 }

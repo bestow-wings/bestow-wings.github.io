@@ -51,9 +51,7 @@ const services = [
 function App() {
   return (
     <div>
-      <div>
         <Navbar />
-      </div>
         <Hero />
         <div style={{width: "75%", justifyContent: "center", margin: "auto"}}>
         <Cards data={projects} />
