@@ -57,9 +57,26 @@ function App() {
       <div style={{width: "75%", justifyContent: "center", margin: "auto"}}>
         <Hero />
         <Cards data={projects} />
-        <p>Some information</p>
+        <div style={{textAlign: "center"}}>
+          <p>Some information</p>
+          <button>Another button</button>
+        </div>
+        <p></p>
         <Cards data ={services} />
-        <p>Hello, world</p>
+        <div style={{textAlign: "center"}}>
+          <p>Connect.</p>
+          <div style={{backgroundColor:"white", color:"black", justifyContent:"space-evenly", display:"flex"}}>
+            <div style={{padding: "0.5em"}}>
+              Medium
+            </div>
+            <div style={{padding: "0.5em"}}>
+              GitHub
+            </div>
+            <div style={{padding: "0.5em"}}>
+              Email
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   
