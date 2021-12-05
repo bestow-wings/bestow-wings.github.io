@@ -11,25 +11,12 @@
 }
 .navbar {
   background-color: var(--platinum);
-  text-align: center;
   line-height: 50px;
-  height: 50px;
+  height: 75px;
   display: flex;
-  width: 75%;
+  width:75%;
+  justify-content: center;
 }
-
-@media (max-width: 1000px) {
-  .cards {
-    width:80%;
-    padding:3em;
-  }
-  .card-image {
-    width:400px;
-    height:500px;
-  }
-}
-
-.navbar,
 .navbar-btn {
   cursor: pointer;
   background-color: transparent;
@@ -50,7 +37,8 @@
   padding: 1em;
   display: flex;
   margin: auto;
-  justify-content:space-evenly
+  justify-content:space-evenly;
+  width: 50%;
 }
 .card-background{
   border-radius: 5px;
@@ -68,8 +56,8 @@
   background-size: auto 100%;
   background-position: center;
   position: relative;
-  width:400px;
-  height:500px;
+  width:250px;
+  height:300px;
 }
 .card-image:hover {
   box-shadow: 0 10px 15px var(--ebony);
@@ -111,4 +99,10 @@ button:hover {
   background-color: rgba(0,0,0,0);
   color: var(--bittersweet);
   border-width: 2px;
+}
+
+@media screen and (max-width: 1920px) {
+  .cards {
+    width: 100%;
+  }
 }
