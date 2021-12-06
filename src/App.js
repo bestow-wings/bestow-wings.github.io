@@ -64,14 +64,13 @@ function App() {
       </div>
         <Hero />
         <div style={{width: "90%", justifyContent: "center", margin: "auto"}}>
-        <Cards data={projects} />
-        <div style={{textAlign: "center"}}>
-          <p>Some information</p>
-          <button>Another button</button>
-        </div>
-        <p></p>
-        <Cards data ={services} />
-        <Navbar names={["Medium", "GitHub", "Email"]} />
+          <Cards data={projects} />
+          <div style={{textAlign: "center"}}>
+            <p>Some information</p>
+            <button>Another button</button>
+          </div>
+          <Cards data ={services} />
+          <Navbar names={["Medium", "GitHub", "Email"]} />
       </div>
     </div>
   );

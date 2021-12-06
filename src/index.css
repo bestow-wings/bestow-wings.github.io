@@ -14,11 +14,9 @@
 }
 .navbar {
   background-color: var(--platinum);
-  line-height: 50px;
-  height: 75px;
   display: flex;
   justify-content: center;
-  margin:auto
+  margin:auto;
 }
 .navbar-btn {
   cursor: pointer;
@@ -37,7 +35,8 @@
   color: var(--platinum);
 }
 .cards {
-  padding: 1em;
+  padding-top:3em;
+  padding-bottom:2em;
   display: flex;
   margin: auto;
   justify-content:space-evenly;
@@ -67,6 +66,7 @@
 }
 .card-image:active {
   box-shadow: 0 2px 5px var(--ebony);
+  transform: translateY(4px);
 }
 .card-text {
   color: var(--platinum);

@@ -4,7 +4,7 @@ const Navbar = ({names}) => {
     return (
         <div className="navbar">
             {names.map((names) => (
-                <button className="navbar-btn">{names}</button>
+                <a href="http://www.google.com"><button className="navbar-btn">{names}</button></a>
             ))}
         </div>
     )
