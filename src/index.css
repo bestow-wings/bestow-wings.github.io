@@ -114,7 +114,13 @@ button:hover {
 }
 
 @media screen and (max-width: 1920px) {
+  .card-image {
+    width: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
   .cards {
     width: 100%;
+    flex-direction: column;
   }
 }
