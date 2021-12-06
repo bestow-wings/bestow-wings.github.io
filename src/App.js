@@ -58,7 +58,10 @@ const services = [
 function App() {
   return (
     <div>
-        <Navbar />
+      <div style={{display: "flex"}}>
+        <div className="logo">aukibit</div>
+        <Navbar names={["Home", "About", "Contact"]} />
+      </div>
         <Hero />
         <div style={{width: "90%", justifyContent: "center", margin: "auto"}}>
         <Cards data={projects} />
@@ -68,20 +71,9 @@ function App() {
         </div>
         <p></p>
         <Cards data ={services} />
-        <div style={{textAlign: "center", justifyContent:"space-evenly", display:"flex"}}>
-          <div style={{padding: "0.5em"}}>
-            Medium
-          </div>
-          <div style={{padding: "0.5em"}}>
-            GitHub
-          </div>
-          <div style={{padding: "0.5em"}}>
-            Email
-          </div>
-        </div>
+        <Navbar names={["Medium", "GitHub", "Email"]} />
       </div>
     </div>
-  
   );
 }
 

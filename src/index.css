@@ -2,6 +2,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
 
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+
+
 :root {
   --russian-violet: #320e3b;
   --bittersweet: #f87060;
@@ -14,8 +17,8 @@
   line-height: 50px;
   height: 75px;
   display: flex;
-  width:75%;
   justify-content: center;
+  margin:auto
 }
 .navbar-btn {
   cursor: pointer;
@@ -99,6 +102,15 @@ button:hover {
   background-color: rgba(0,0,0,0);
   color: var(--bittersweet);
   border-width: 2px;
+}
+
+.logo {
+  font-family: "Oleo Script", serif;
+  font-size: 50px;
+  color: var(--);
+  margin: auto;
+  letter-spacing: -2px;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 1920px) {
