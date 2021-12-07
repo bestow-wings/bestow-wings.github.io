@@ -12,6 +12,9 @@
   --viridian-green: #32908f; /* 50, 144, 143 */
   --ebony: #545c52;
 }
+.banner {
+  display: flex;
+}
 .navbar {
   background-color: var(--platinum);
   display: flex;
@@ -28,6 +31,11 @@
 }
 .navbar-btn:hover {
   color: var(--russian-violet);
+}
+.content {
+  width:90%;
+  justify-content: center;
+  margin: auto;
 }
 .hero {
   padding: 3em 3em 7em 25%;
@@ -114,13 +122,40 @@ button:hover {
 }
 
 @media screen and (max-width: 1920px) {
+  .banner {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+  }
   .card-image {
     width: auto;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    border-radius: 0px;
+    box-shadow: none;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+  }
+  .card-image:hover {
+    box-shadow: none;
+  }
+  .card-image:active {
+    box-shadow: none;
+    transform: none;
+  }
+  .card-background {
+    border-radius: 0px;
   }
   .cards {
     width: 100%;
     flex-direction: column;
+  }
+  .hero {
+    padding:  10%;
+  }
+  .navbar {
+    padding-bottom: 1em;
   }
 }

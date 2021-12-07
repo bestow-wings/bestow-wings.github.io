@@ -58,12 +58,12 @@ const services = [
 function App() {
   return (
     <div>
-      <div style={{display: "flex"}}>
+      <div className="banner">
         <div className="logo">aukibit</div>
         <Navbar names={["Home", "About", "Contact"]} />
       </div>
         <Hero />
-        <div style={{width: "90%", justifyContent: "center", margin: "auto"}}>
+        <div className="content">
           <Cards data={projects} />
           <div style={{textAlign: "center"}}>
             <p>Some information</p>
