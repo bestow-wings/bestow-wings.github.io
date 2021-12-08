@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Cards from "./components/Cards"
+import About from "./components/About"
 
 import chess_ai_gif from "./img/chess_ai.gif"
 
@@ -32,26 +33,33 @@ const projects = [
   }
 ]
 
-const services = [
+const social_links = [
   {
-    id: 1, 
-    title: "Service 1",
-    description: "A service"
+    text: "Medium",
+    link: "https://medium.com/@dylanjsw"
   },
   {
-    id: 2,
-    title: "Service 2",
-    description: "A service"
+    text: "GitHub",
+    link: "https://github.com/bestow-wings/"
   },
   {
-    id: 3, 
-    title: "Service 3",
-    description: "A service"
+    text: "Email",
+    link: "mailto:dylanjsw@outlook.com"
+  }
+]
+
+const nav_links = [
+  {
+    text: "Home",
+    link: "./"
   },
   {
-    id: 4, 
-    title: "Service 4",
-    description: "A service"
+    text: "About",
+    link: "https://www.google.com/"
+  },
+  {
+    text: "Contact",
+    link: "https://www.google.com/"
   }
 ]
 
@@ -60,17 +68,17 @@ function App() {
     <div>
       <div className="banner">
         <div className="logo">aukibit</div>
-        <Navbar names={["Home", "About", "Contact"]} />
+        <Navbar links={nav_links} />
       </div>
         <Hero />
         <div className="content">
           <Cards data={projects} />
-          <div style={{textAlign: "center"}}>
+          <div style={{textAlign: "center", marginBottom:"5rem"}}>
             <p>Some information</p>
             <button>Another button</button>
           </div>
-          <Cards data ={services} />
-          <Navbar names={["Medium", "GitHub", "Email"]} />
+          <About />
+          <Navbar links={social_links} />
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 import "../index.css"
 
-const Navbar = ({names}) => {
+const Navbar = ({links}) => {
     return (
         <div className="navbar">
-            {names.map((names) => (
-                <a href="http://www.google.com"><button className="navbar-btn">{names}</button></a>
+            {links.map((links) => (
+                <a href={links.link} target="_blank"><button className="navbar-btn">{links.text}</button></a>
             ))}
         </div>
     )

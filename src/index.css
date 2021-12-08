@@ -12,6 +12,21 @@
   --viridian-green: #32908f; /* 50, 144, 143 */
   --ebony: #545c52;
 }
+.about {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 70%;
+}
+.about-sections li {
+  background-color: var(--bittersweet);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 20px;
+  color: var(--platinum);
+  list-style: none;
+}
 .banner {
   display: flex;
 }
@@ -39,8 +54,8 @@
 }
 .hero {
   padding: 3em 3em 7em 25%;
-  background-color: var(--russian-violet);
   color: var(--platinum);
+  background: linear-gradient(to bottom right, var(--russian-violet) 60%, var(--bittersweet));
 }
 .cards {
   padding-top:3em;
