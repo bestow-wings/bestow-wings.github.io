@@ -75,9 +75,8 @@ function App() {
           <Cards data={projects} />
           <div style={{textAlign: "center", marginBottom:"5rem"}}>
             <p>Some information</p>
-            <button>Another button</button>
+            <button>Contact</button>
           </div>
-          <About />
           <Navbar links={social_links} />
       </div>
     </div>

@@ -1,12 +1,27 @@
-import Heading from "./Heading"
 import "../index.css"
+
+import icon from "../img/magic-book.png"
+/* https://www.flaticon.com/packs/magic-138?style_id=1225&family_id=333&group_id=1837 */
 
 const Hero = () => {
     return (
-        <div className="hero">
-            <Heading />
-            <h3>We have robots for the robot work.</h3>
-            <button>a button</button>
+        <div  className="hero">
+            <div>
+                <h1>Let your people do people work.</h1>
+                <h3>We have robots for the robot work.</h3>
+                <button>Contact</button>
+            </div>
+            <div className="hero-card">
+                <div style={{display:"flex"}}>
+                    <div style={{margin:"auto"}}>
+                            <img src={icon} height={100} ></img>
+                    </div>
+                    <div style={{paddingLeft:"3rem"}}>
+                        <h2>Works like magic.</h2>
+                        <h3>Tech that makes your barriers to growth <span className="hero-gradient-text">disappear</span></h3>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

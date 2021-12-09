@@ -6,26 +6,13 @@
 
 
 :root {
-  --russian-violet: #320e3b;
+  --russian-violet: rgb(50, 14, 59);
   --bittersweet: #f87060;
+  --light-platinum: #e6e6e6;
   --platinum: #e7e7e7;
+  --dark-platinum: hsl(0, 0%, 80%);
   --viridian-green: #32908f; /* 50, 144, 143 */
-  --ebony: #545c52;
-}
-.about {
-  display: flex;
-  margin: auto;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 70%;
-}
-.about-sections li {
-  background-color: var(--bittersweet);
-  border-radius: 20px;
-  padding: 1rem;
-  margin: 20px;
-  color: var(--platinum);
-  list-style: none;
+  --ebony: rgb(84, 92, 82);
 }
 .banner {
   display: flex;
@@ -55,7 +42,28 @@
 .hero {
   padding: 3em 3em 7em 25%;
   color: var(--platinum);
-  background: linear-gradient(to bottom right, var(--russian-violet) 60%, var(--bittersweet));
+  background: linear-gradient(60deg, var(--russian-violet) 10%, var(--bittersweet));
+  display: flex;
+}
+.hero-card {
+  background-color: var(--platinum);
+  color: var(--ebony);
+  justify-content: center;
+  margin-left:6em;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 5px 10px 25px 20px rgba(50, 14, 59, 0.2);
+  height: 100%;
+  transition: 0.1s;
+}
+.hero-card:hover{
+  transform: translateY(5px);
+  box-shadow: 5px 10px 40px 30px rgba(50, 14, 59, 0.2);
+}
+.hero-gradient-text {
+  background: linear-gradient(45deg, var(--ebony), transparent);
+  background-clip: text;
+  color:transparent;
 }
 .cards {
   padding-top:3em;
@@ -73,7 +81,6 @@
   background: linear-gradient(rgba(50, 144, 143,1.0), rgba(50, 144, 143,0.9), rgba(50, 144, 134,0.6))
 }
 .card-image {
-  box-shadow: 0 2px 2px var(--ebony);
   border-radius: 5px;
   transition: all 0.1s;
   cursor: pointer;
@@ -116,6 +123,7 @@ button {
   color: var(--russian-violet);
   border-radius: 15px;
   border-style: solid;
+  font-weight: bold;
 }
 button,
 button:hover {
@@ -169,8 +177,44 @@ button:hover {
   }
   .hero {
     padding:  10%;
+    flex-direction: column;
+  }
+  .hero-card {
+    margin-left:0;
+    margin-top:3rem;
   }
   .navbar {
     padding-bottom: 1em;
   }
 }
+/* .about {
+  display: flex;
+  margin-left: auto;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 70%;
+}
+.about-sections {
+  background-color: var(--dark-platinum);
+  border-radius: 20px;
+}
+.about-sections ul {
+  list-style: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.about-sections li {
+  border-radius:5px;
+  padding: 1rem;
+  margin: 20px;
+  color: var(--ebony);
+  list-style: none;
+}
+.about-sections li:hover {
+  background-color: var(--light-platinum);
+  cursor: pointer;
+}
+.about-text {
+  margin-right: auto;
+  padding-left: 5rem;
+} */
