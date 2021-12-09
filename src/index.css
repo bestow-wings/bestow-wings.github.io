@@ -48,13 +48,13 @@
 .hero-card {
   background-color: var(--platinum);
   color: var(--ebony);
-  justify-content: center;
   margin-left:6em;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 5px 10px 25px 20px rgba(50, 14, 59, 0.2);
   height: 100%;
   transition: 0.1s;
+  display:flex;
 }
 .hero-card:hover{
   transform: translateY(5px);
@@ -64,6 +64,10 @@
   background: linear-gradient(45deg, var(--ebony), transparent);
   background-clip: text;
   color:transparent;
+}
+.hero-icon {
+  margin:auto;
+  padding-right:2rem;
 }
 .cards {
   padding-top:3em;
@@ -182,6 +186,12 @@ button:hover {
   .hero-card {
     margin-left:0;
     margin-top:3rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-icon {
+    text-align: center;
+    padding:0;
   }
   .navbar {
     padding-bottom: 1em;

@@ -12,14 +12,12 @@ const Hero = () => {
                 <button>Contact</button>
             </div>
             <div className="hero-card">
-                <div style={{display:"flex"}}>
-                    <div style={{margin:"auto"}}>
-                            <img src={icon} height={100} ></img>
-                    </div>
-                    <div style={{paddingLeft:"3rem"}}>
-                        <h2>Works like magic.</h2>
-                        <h3>Tech that makes your barriers to growth <span className="hero-gradient-text">disappear</span></h3>
-                    </div>
+                <div className="hero-icon">
+                        <img src={icon} height={100} ></img>
+                </div>
+                <div>
+                    <h2>Works like magic.</h2>
+                    <h3>Tech that makes your barriers to growth <span className="hero-gradient-text">disappear</span></h3>
                 </div>
             </div>
         </div>
