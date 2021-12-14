@@ -75,7 +75,7 @@
   display: flex;
   margin: auto;
   justify-content:space-evenly;
-  width: 50%;
+  width: 75%;
 }
 .card-background{
   border-radius: 5px;
@@ -92,8 +92,8 @@
   background-size: auto 100%;
   background-position: center;
   position: relative;
-  width:250px;
-  height:300px;
+  width:20%;
+  height:400px;
 }
 .card-image:hover {
   box-shadow: 0 10px 15px var(--ebony);
@@ -105,6 +105,9 @@
 .card-text {
   color: var(--platinum);
   text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
@@ -148,7 +151,7 @@ button:hover {
   font-weight: bolder;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1600px) {
   .banner {
     flex-direction: column;
   }
