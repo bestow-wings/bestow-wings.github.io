@@ -4,7 +4,7 @@ const Navbar = ({links}) => {
     return (
         <div className="navbar">
             {links.map((links) => (
-                <a href={links.link} target="_blank"><button className="navbar-btn">{links.text}</button></a>
+                <a key={links.key} href={links.link} target="_blank" rel="noreferrer"><button className="navbar-btn">{links.text}</button></a>
             ))}
         </div>
     )

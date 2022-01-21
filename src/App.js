@@ -1,8 +1,6 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Cards from "./components/Cards"
-import About from "./components/About"
-
 import chess_ai_gif from "./img/chess_ai.gif"
 
 const projects = [
@@ -35,14 +33,17 @@ const projects = [
 
 const social_links = [
   {
+    key: 1,
     text: "Medium",
     link: "https://medium.com/@dylanjsw"
   },
   {
+    key: 2,
     text: "GitHub",
     link: "https://github.com/bestow-wings/"
   },
   {
+    key: 3,
     text: "Email",
     link: "mailto:dylanjsw@outlook.com"
   }
@@ -50,14 +51,17 @@ const social_links = [
 
 const nav_links = [
   {
+    key: 1,
     text: "Home",
     link: "./"
   },
   {
+    key:2,
     text: "About",
     link: "https://www.google.com/"
   },
   {
+    key:3,
     text: "Contact",
     link: "https://www.google.com/"
   }

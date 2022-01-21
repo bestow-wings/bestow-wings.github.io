@@ -13,7 +13,7 @@ const Hero = () => {
             </div>
             <div className="hero-card">
                 <div className="hero-icon">
-                        <img src={icon} height={100} ></img>
+                        <img alt="icon" src={icon} height={100} ></img>
                 </div>
                 <div>
                     <h2>Works like magic.</h2>

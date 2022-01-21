@@ -40,10 +40,14 @@
   margin: auto;
 }
 .hero {
-  padding: 3em 3em 7em 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   color: var(--platinum);
   background: linear-gradient(60deg, var(--russian-violet) 10%, var(--bittersweet));
   display: flex;
+  justify-content: center;
 }
 .hero-card {
   background-color: var(--platinum);
@@ -151,7 +155,7 @@ button:hover {
   font-weight: bolder;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1400px) {
   .banner {
     flex-direction: column;
   }
