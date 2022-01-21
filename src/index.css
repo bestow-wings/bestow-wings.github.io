@@ -29,7 +29,10 @@
   border: 0;
   font-weight: 700;
   transition: all 0.1s;
-  color: var(--ebony)
+  color: var(--ebony);
+  text-decoration: none;
+  margin-left: 1rem;
+  margin-right:1rem;
 }
 .navbar-btn:hover {
   color: var(--russian-violet);
@@ -113,6 +116,27 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.titanic-survivor {
+  background-color: var(--viridian-green);
+  display: flex;
+  justify-content: center;
+  color: var(--platinum);
+  flex-direction: column;
+}
+
+.titanic-survivor-heading{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.titanic-survivor-ul{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 
 body {
   font-family: "IBM Plex Sans Devanagari", serif;

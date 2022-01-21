@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Cards from "./components/Cards"
 import chess_ai_gif from "./img/chess_ai.gif"
+import titanic_img from "./img/titanic.jpg"
 
 const projects = [
   {
@@ -13,9 +14,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project 2",
-    description: "A project",
-    imgsrc:""
+    title: "Titanic Survivor",
+    description: "Native JavaScript TensorFlowJS implementation",
+    imgsrc: titanic_img,
+    link: "/titanic-survivor"
   },
   {
     id: 3, 
@@ -49,31 +51,9 @@ const social_links = [
   }
 ]
 
-const nav_links = [
-  {
-    key: 1,
-    text: "Home",
-    link: "./"
-  },
-  {
-    key:2,
-    text: "About",
-    link: "https://www.google.com/"
-  },
-  {
-    key:3,
-    text: "Contact",
-    link: "https://www.google.com/"
-  }
-]
-
-function App() {
+function Home() {
   return (
     <div>
-      <div className="banner">
-        <div className="logo">aukibit</div>
-        <Navbar links={nav_links} />
-      </div>
         <Hero />
         <div className="content">
           <Cards data={projects} />
@@ -87,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
