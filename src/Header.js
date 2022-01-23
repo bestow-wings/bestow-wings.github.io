@@ -11,12 +11,12 @@ const nav_links = [
   {
     key:2,
     text: "About",
-    link: "/titanic-survivor"
+    link: "/"
   },
   {
     key:3,
     text: "Contact",
-    link: "https://www.google.com/"
+    link: "/"
   }
 ]
 

@@ -4,7 +4,6 @@ const Card = ({ title, description, imgsrc, link }) => {
   return (
     <a
       href={link}
-      target="_blank"
       rel="noreferrer"
       className="card-image"
       style={{ backgroundImage: `url("${imgsrc}")` }}

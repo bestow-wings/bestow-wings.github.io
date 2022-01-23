@@ -117,26 +117,58 @@
   margin-right: auto;
 }
 
-.titanic-survivor {
-  background-color: var(--viridian-green);
+.titanic-survivor-super {
+  background: linear-gradient(60deg, var(--russian-violet) 10%, var(--viridian-green));
+}
+
+.titanic-survivor-parent {
   display: flex;
-  justify-content: center;
   color: var(--platinum);
+  flex-direction: row;
+  width:60%;
+  margin: auto;
+}
+
+.titanic-survivor {
+  display: flex;
   flex-direction: column;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width:40%;
 }
 
-.titanic-survivor-heading{
+.titanic-survivor h1,
+.titanic-survivor h2,
+.titanic-survivor h3 {
   display: flex;
   justify-content: center;
-  margin: auto;
 }
 
-.titanic-survivor-ul{
+.titanic-survivor form {
   display: flex;
-  justify-content: center;
-  margin: auto;
+  flex-direction: column;
+  margin:auto;
 }
 
+.titanic-survivor form input,
+.titanic-survivor form select,
+.titanic-survivor form control {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem 0.5rem;
+  border: none;
+}
+
+.titanic-survivor a {
+  color: var(--platinum);
+}
+
+.titanic-survivor p {
+  word-break: normal;
+  white-space: normal;
+  text-align: justify;
+}
 
 body {
   font-family: "IBM Plex Sans Devanagari", serif;
@@ -152,14 +184,15 @@ h1, h3 {
 
 button {
   background-color: var(--bittersweet);
-  padding: 0.5em 3em;
   transition: all 0.1s;
   cursor: pointer;
-  color: var(--russian-violet);
-  border-radius: 15px;
-  border-style: solid;
   font-weight: bold;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 0.5em 3em;
+  color: var(--russian-violet);
 }
+
 button,
 button:hover {
   border-color: var(--bittersweet);
@@ -168,6 +201,10 @@ button:hover {
   background-color: rgba(0,0,0,0);
   color: var(--bittersweet);
   border-width: 2px;
+}
+button:active{
+  background-color: var(--bittersweet);
+  transition: all 0.0s;
 }
 
 .logo {
