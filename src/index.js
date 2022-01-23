@@ -11,7 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
-          <Route path="titanic-survivor" element={<TitanicSurvivor />} />
+          <Route path="/titanic-survivor" element={<TitanicSurvivor />} />
         </Route>
       </Routes>
     </BrowserRouter>

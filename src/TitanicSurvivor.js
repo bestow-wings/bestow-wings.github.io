@@ -68,18 +68,9 @@ function TitanicSurvivor() {
   }
 
   return (
+    <>
     <div className="titanic-survivor-super">
       <div className = 'titanic-survivor-parent'>
-        <div className = "titanic-survivor">
-          <h1>Why is this interesting?</h1>
-          <p>This relies on a machine learning algorithm built natively in JavaScript using 
-            TensorFlowJS. It was trained on the
-            <a href="https://www.kaggle.com/c/titanic/data"> Titanic - Machine Learning 
-            from Disaster</a> dataset from Kaggle. This model is about 75% accurate depending
-            on the validation dataset. The best models, built by teams of machine learning
-            specialists, only get about 81%.</p>
-            <p>The source code used to train the model is reproduced below.</p>
-            </div>
         <div className = "titanic-survivor">
           <div>
             <h1>Titanic Survivor</h1>
@@ -139,11 +130,23 @@ function TitanicSurvivor() {
               <h2>{survived}</h2>
           </div>
         </div>
-      </div>
-      <div style={{width:"60%", margin:"auto"}}>
-      <Gist id='787386ded49d2bdf37238d90a895b69c' />
+        <div className = "titanic-survivor">
+          <h1>Why is this interesting?</h1>
+          <p>This relies on a machine learning algorithm built natively in JavaScript using 
+            TensorFlowJS. It was trained on the
+            <a href="https://www.kaggle.com/c/titanic/data"> Titanic - Machine Learning 
+            from Disaster</a> dataset from Kaggle. This model is about 75% accurate depending
+            on the validation dataset. The best models, built by teams of machine learning
+            specialists, only get about 81%.</p>
+            <p>The source code used to train the model is reproduced below.</p>
+            </div>
+
       </div>
     </div>
+    <div style={{width:"1000px", margin:"auto", paddingTop:"2rem"}}>
+      <Gist id='787386ded49d2bdf37238d90a895b69c' />
+      </div>
+    </>
   );
 }
 

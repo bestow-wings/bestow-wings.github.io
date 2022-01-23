@@ -10,7 +10,7 @@ const projects = [
     title: "Chess AI",
     description: "Playable Chess AI with TensorFlow",
     imgsrc: chess_ai_gif,
-    link: "https://medium.com/@dylanjsw/playable-chess-ai-with-tensorflow-26c318207452"
+    link: "//medium.com/@dylanjsw/playable-chess-ai-with-tensorflow-26c318207452"
   },
   {
     id: 2,
@@ -23,13 +23,15 @@ const projects = [
     id: 3, 
     title: "Project 3",
     description: "A project",
-    imgsrc:""
+    imgsrc:"",
+    link: "/"
   },
   {
     id: 4, 
     title: "Project 4",
     description: "A project",
-    imgsrc:""
+    imgsrc:"",
+    link: "/"
   }
 ]
 
@@ -37,17 +39,12 @@ const social_links = [
   {
     key: 1,
     text: "Medium",
-    link: "https://medium.com/@dylanjsw"
+    link: "//medium.com/@dylanjsw"
   },
   {
     key: 2,
     text: "GitHub",
-    link: "https://github.com/bestow-wings/"
-  },
-  {
-    key: 3,
-    text: "Email",
-    link: "mailto:dylanjsw@outlook.com"
+    link: "//github.com/bestow-wings/"
   }
 ]
 
