@@ -1,35 +1,11 @@
 import { useState } from 'react';
+import { generateSstakeholderData } from './data/stakeholderData'
+
+import StakeholderCard from "../components/StakeholderCard"
 
 import "./styles/stakeholdermanager.css"
 
-const organisations = [
-  "facebook",
-  "apple",
-  "amazon",
-  "netflix",
-  "google"
-]
-
-const stakeholders = [
-  {
-    name: "Tim Cook",
-    organisations: [
-      {
-        name: "apple",
-        role: "ceo"
-      }
-    ]
-  },
-  {
-    name: "Mark Zuckerberg",
-    organisations: [
-      {
-        name: "facebook",
-        role: "ceo"
-      }
-    ]
-  }
-]
+const stakeholderData = generateSstakeholderData();
 
 function StakeholderManager() {
 
@@ -52,19 +28,10 @@ function StakeholderManager() {
           <button type="submit" value="Submit">Submit</button>
         </form>
       </div>
-      <div className="srm-columns">
-        <div>
-          <h2>Organisation</h2>
-        </div>
-        <div>
-          <h2>Stakeholder</h2>
-        </div>
-        <div>
-          <h2>Information</h2>
-        </div>
-        <div>
-          <h2>Touchpoints</h2>
-        </div>
+      <div className="srm-cards">
+        {stakeholderData.map((stakeholderData) => (
+            <StakeholderCard name={stakeholderData.name} organisations={stakeholderData.organisations} />
+        ))}
       </div>
     </>
   );
