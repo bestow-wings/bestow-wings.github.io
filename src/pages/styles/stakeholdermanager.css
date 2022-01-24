@@ -1,0 +1,33 @@
+.srm-banner {
+    background: linear-gradient(60deg, var(--russian-violet) 10%, var(--viridian-green));
+    text-align: center;
+    font-weight: bolder;
+    padding: 0 0 3vh 0;
+}
+.srm-banner h1 {
+    font-family: "Oleo Script";
+    font-size: 150px;
+    color:var(--viridian-green);
+    text-shadow: 10px 10px 0 var(--russian-violet), 15px 15px 0px var(--bittersweet);
+    letter-spacing: -10px;
+    margin:0;
+}
+.srm-banner p {
+    font-size: xx-large;
+    font-family: "Libre Franklin";
+    color: var(--platinum);
+}
+.srm-banner form input {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    width:10vw;
+    margin-right:1vw;
+  }
+
+.srm-columns {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:90%;
+    margin:auto;
+}

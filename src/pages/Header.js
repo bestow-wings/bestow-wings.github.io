@@ -1,6 +1,6 @@
 import { Outlet, Link } from 'react-router-dom'
 
-import Navbar from "./components/Navbar"
+import Navbar from "../components/Navbar"
 
 const nav_links = [
   {

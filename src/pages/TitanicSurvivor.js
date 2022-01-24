@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Gist from 'react-gist';
 
-import "./index.css"
+import "../index.css"
 
 const tf = require("@tensorflow/tfjs")
 

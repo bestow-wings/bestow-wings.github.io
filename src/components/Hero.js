@@ -1,6 +1,6 @@
 import "../index.css"
 
-import icon from "../img/magic-book.png"
+import icon from "../pages/img/magic-book.png"
 /* https://www.flaticon.com/packs/magic-138?style_id=1225&family_id=333&group_id=1837 */
 
 const Hero = () => {

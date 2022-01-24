@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Cards from "./components/Cards"
+import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
+import Cards from "../components/Cards"
 import chess_ai_gif from "./img/chess_ai.gif"
 import titanic_img from "./img/titanic.jpg"
 
@@ -21,10 +21,10 @@ const projects = [
   },
   {
     id: 3, 
-    title: "Project 3",
-    description: "A project",
+    title: "Stakeholder Relationship Manager (SRM)",
+    description: "A relationship manager that treats stakeholders like people",
     imgsrc:"",
-    link: "/"
+    link: "/stakeholder-manager"
   },
   {
     id: 4, 

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './Header'
-import Home from './Home';
-import TitanicSurvivor from './TitanicSurvivor';
+import Header from './pages/Header'
+import Home from './pages/Home';
+import TitanicSurvivor from './pages/TitanicSurvivor';
+import StakeholderManager from './pages/StakeholderManager';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
           <Route path="/titanic-survivor" element={<TitanicSurvivor />} />
+          <Route path="/stakeholder-manager" element={<StakeholderManager />} />
         </Route>
       </Routes>
     </BrowserRouter>
