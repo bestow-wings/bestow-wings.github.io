@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 import Navbar from "./components/Navbar"
 
@@ -24,7 +24,7 @@ function Header() {
   return (
       <>
         <div className="banner">
-          <div className="logo">aukibit</div>
+          <div className="logo"><Link to="/">a</Link></div>
           <Navbar links={nav_links} />
         </div>
         <Outlet />
