@@ -55,6 +55,9 @@
   margin-top:auto;
   margin-bottom:auto;
 }
+.hero-text h3 {
+  color: var(--platinum);
+}
 .hero-card {
   background-color: var(--platinum);
   color: var(--ebony);
@@ -93,6 +96,9 @@
   flex-direction:row;
   margin:auto;
   padding-bottom: 5rem;
+}
+.hero-card h2, .hero-card h3 {
+  color: var(--ebony);
 }
 
 .cards {
