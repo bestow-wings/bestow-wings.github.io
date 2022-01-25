@@ -195,27 +195,23 @@ h1, h3 {
 
 button {
   background-color: var(--bittersweet);
-  transition: all 0.1s;
   cursor: pointer;
   font-weight: bold;
   border-style: solid;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0.5em 3em;
   color: var(--russian-violet);
-}
-
-button,
-button:hover {
   border-color: var(--bittersweet);
 }
+
 button:hover {
-  background-color: rgba(0,0,0,0);
-  color: var(--bittersweet);
-  border-width: 2px;
+  box-shadow: 3px 5px 0px var(--viridian-green);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 button:active{
-  background-color: var(--bittersweet);
-  transition: all 0.0s;
+  box-shadow: 3px 3px 0px var(--viridian-green);
+  transform: translateY(0px);
 }
 
 .logo, .logo a {

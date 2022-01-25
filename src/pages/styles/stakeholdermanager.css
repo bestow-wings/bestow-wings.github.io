@@ -23,14 +23,19 @@
     width:10vw;
     margin-right:1vw;
   }
+.srm-banner form {
+    margin-top:2vh;
+}
 
 .srm-card {
     text-align: center;
     border-radius: 10px;
     width: 10vw;
-    color: var(--platinum);
+    color: var(--russian-violet);
     background-color: var(--bittersweet);
     box-shadow: 5px 10px 0px var(--russian-violet);
+    margin: 10px 10px;
+    padding: 0 0 2vh 0;
 }
 .srm-card:hover {
     box-shadow: 10px 15px 0px var(--viridian-green);
@@ -47,9 +52,62 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-top:2rem;
+    flex-wrap: wrap;
+}
+.srm-cards h3, .srm-cards p {
+    color: var(--russian-violet);
+}
+
+.srm-functions {
+    padding-top:2rem;
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+    margin:auto;
+}
+.srm-functions form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.srm-functions form input {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    width:15vw;
+    margin: 0.5vh 0.5vh;
+}
+.srm-add-stakeholder-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1vh;
+}
+
+.srm-detail {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 20vw;
+    padding: 3vh 5vw;
+    border-radius: 15px;
+    background-color: var(--russian-violet);
+}
+.srm-detail h1, h2, h3, p{
+    color: var(--platinum)
+}
+.srm-detail h1 {
+    margin: 0 0 1vh 0;
+}
+.srm-detail h2 {
+    margin: 0 0 0.5vh 0;
+}
+.srm-detail h3, p {
+    margin: 0;
 }
 
 @media screen and (max-width: 1400px) {
+    .srm-add-stakeholder-btns {
+        flex-direction: column;
+        width: 100%;
+    }
     .srm-banner h1 {
         font-size: 50px;
         letter-spacing: -3px;
@@ -59,14 +117,14 @@
         font-size: medium;
     }
     .srm-banner button {
-        width: auto%;
+        width: auto;
         margin:auto;
     }
     .srm-banner form {
         display:flex;
         flex-direction: row;
         width: 80%;
-        margin:auto;
+        margin: 2vh auto 0 auto;
     }
     .srm-banner form input {
         width:100%;
@@ -76,12 +134,21 @@
     }
     .srm-card {
         width:90%;
-        margin-top:2rem;
+        margin-top: 2vh;
         margin-left: auto;
         margin-right: auto;
     }
     .srm-cards {
         padding: 0;
         flex-direction: column;
+    }
+    .srm-detail {
+        margin: 5vh 5vw;
+    }    
+    .srm-functions button {
+        margin: 0 0 1vh 0 ;
+    }
+    .srm-functions form input {
+        width:100%;
     }    
 }

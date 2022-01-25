@@ -1,4 +1,4 @@
-const stakeholders = [
+var stakeholders = [
     {
       name: "Tim Cook",
       organisations: [
@@ -72,4 +72,9 @@ const stakeholders = [
     }
 ]
 
-export function generateSstakeholderData () { return stakeholders }
+export function generateStakeholderData () {
+  return stakeholders.map((e) => {
+    e.relationshipOwner = "A. N. Other";
+    return e;
+  })
+}

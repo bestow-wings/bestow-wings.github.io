@@ -1,12 +1,12 @@
 import "../pages/styles/stakeholdermanager.css"
 
-const StakeholderCard = ({ name, organisations}) => {
+const StakeholderCard = ({ stakeholder, onClickFunc}) => {
   return (
-          <div className="srm-card">
-            <h3>{name}</h3>
-            {organisations.map((organisations) =>
+          <div className="srm-card" onClick={() => {onClickFunc(stakeholder)}}>
+            <h3>{stakeholder.name}</h3>
+            {stakeholder.organisations.map((e) =>
               <>
-                <p>{organisations.name}, {organisations.role}</p>
+                 <p>{e.name}, {e.role}</p>
               </>
             )}
           </div>
