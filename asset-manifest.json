@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.34867a25.chunk.css",
+    "main.css": "/static/css/main.fe8a1a9e.chunk.css",
     "main.js": "/static/js/main.5efa6534.chunk.js",
     "main.js.map": "/static/js/main.5efa6534.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f8eb65d1.js",
@@ -8,7 +8,7 @@
     "static/js/2.62d91c6a.chunk.js": "/static/js/2.62d91c6a.chunk.js",
     "static/js/2.62d91c6a.chunk.js.map": "/static/js/2.62d91c6a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.34867a25.chunk.css.map": "/static/css/main.34867a25.chunk.css.map",
+    "static/css/main.fe8a1a9e.chunk.css.map": "/static/css/main.fe8a1a9e.chunk.css.map",
     "static/js/2.62d91c6a.chunk.js.LICENSE.txt": "/static/js/2.62d91c6a.chunk.js.LICENSE.txt",
     "static/media/chess_ai.5d90db09.gif": "/static/media/chess_ai.5d90db09.gif",
     "static/media/magic-book.51ec30e9.png": "/static/media/magic-book.51ec30e9.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.f8eb65d1.js",
     "static/js/2.62d91c6a.chunk.js",
-    "static/css/main.34867a25.chunk.css",
+    "static/css/main.fe8a1a9e.chunk.css",
     "static/js/main.5efa6534.chunk.js"
   ]
 }
