@@ -103,6 +103,16 @@
     margin: 0;
 }
 
+.edit-button {
+    width:100px;
+    height:100px;
+}
+.edit-button * {
+    width:  100%;
+    height: 100%;
+    fill: var(--platinum);
+}
+
 @media screen and (max-width: 1400px) {
     .srm-add-stakeholder-btns {
         flex-direction: column;

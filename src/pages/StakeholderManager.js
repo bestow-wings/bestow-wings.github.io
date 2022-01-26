@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { generateStakeholderData } from './data/stakeholderData'
 
 import StakeholderCard from "../components/StakeholderCard"
+import EditButton from "../components/EditButton"
 
 import "./styles/stakeholdermanager.css"
 
@@ -101,7 +102,7 @@ function StakeholderManager() {
         ))}
       </div>
       <div className = "srm-detail">
-          <h1>{detailName}</h1>
+          <h1>{detailName}</h1><EditButton func={()=>{;}}/>
           {detailOrganisations.map((detailOrganisations) => (
             <h2>{detailOrganisations.name}, {detailOrganisations.role}</h2>
           ))}

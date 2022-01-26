@@ -14,7 +14,7 @@ const Hero = () => {
             <div className="hero-body">
                 <div className="hero-text">
                     <h1>Let your people do people work.</h1>
-                    <h3>We have robots for the robot work.</h3>
+                    <h3> We have robots for the robot work.</h3>
                     <button>Contact</button>
                 </div>
                 <div className="hero-card">
