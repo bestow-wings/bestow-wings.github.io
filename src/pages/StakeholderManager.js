@@ -27,7 +27,7 @@ function StakeholderManager() {
     } else if (e.target.placeholder.toLowerCase() === "relationship owner") {
       newStakeholder["relationshipOwner"] = e.target.value;
     } else {
-      newStakeholder[e.target.placeholder.toLowerCase()] = e.target.value;
+      newStakeholder[e.target.id] = e.target.value;
     }
   }
 
@@ -42,6 +42,8 @@ function StakeholderManager() {
     } else if (e.target.id  === "relationshipOwner") {
       updatedStakeholder["relationshipOwner"] = e.target.value;
     } else if (e.target.id === "name") {
+      updatedStakeholder[e.target.id] = e.target.value;
+    } else {
       updatedStakeholder[e.target.id] = e.target.value;
     }
 
@@ -73,9 +75,35 @@ function StakeholderManager() {
   const addStakeholder = (event) => {
     event.preventDefault();
     handleAddStakeholderBtn();
+
+    var newKey = -1;
+
+    for (let i = 0; i < stakeholderData.length; i++) {
+      if (stakeholderData[i].key > newKey) {
+        newKey = stakeholderData[i].key;
+      }
+    }
+
+    newKey++;
+    newStakeholder.key = newKey;
     
     stakeholderData.push(newStakeholder)
     setNewStakeholder(blankStakeholder());
+  }
+
+  const deleteDetailStakeholder = (event) => {
+    const delKey = detailStakeholder.key;
+    var newData = stakeholderData;
+
+    for (let i = 0; i < newData.length; i++) {
+      console.log(newData[i].key, delKey)
+      if (newData[i].key === delKey) {
+        newData.splice(delKey, 1);
+        break;
+      }
+    }
+    setStakeholderData(newData);
+    setDetailStakeholder(stakeholderData[0])
   }
 
 
@@ -99,21 +127,37 @@ function StakeholderManager() {
             <input
               type="text"
               placeholder="Name"
+              id = "name"
               onChange={handleChangeNewStakeholder}
             />
             <input
               type="text"
               placeholder="Organisation"
+              id="organisation"
               onChange={handleChangeNewStakeholder}
             />
             <input
               type="text"
               placeholder="Role"
+              id="role"
               onChange={handleChangeNewStakeholder}
             />
             <input
               type="text"
               placeholder="Relationship Owner"
+              id="relationshipOwner"
+              onChange={handleChangeNewStakeholder}
+            />
+            <input
+              type="text"
+              placeholder="Email Address"
+              id="email"
+              onChange={handleChangeNewStakeholder}
+            />
+            <input
+              type="text"
+              placeholder="Phone Number"
+              id="phone"
               onChange={handleChangeNewStakeholder}
             />
             <div className="srm-add-stakeholder-btns">
@@ -128,6 +172,7 @@ function StakeholderManager() {
           <StakeholderCard stakeholder={stakeholder} onClickFunc={setDetailStakeholder}/>
         ))}
       </div>
+      
         <div className = "srm-detail">
             <div className="srm-detail-form">
             {showEditStakeholderForm ? (
@@ -160,6 +205,20 @@ function StakeholderManager() {
               defaultValue={detailStakeholder.relationshipOwner}
               onChange={handleChangeDetailStakeholder}
               />
+              <input
+              type="text"
+              id="email"
+              placeholder="email"
+              defaultValue={detailStakeholder.email}
+              onChange={handleChangeDetailStakeholder}
+              />
+              <input
+              type="text"
+              id="phone"
+              placeholder="phone"
+              defaultValue={detailStakeholder.phone}
+              onChange={handleChangeDetailStakeholder}
+              />
               <div className="srm-add-stakeholder-btns">
                 <button onClick={saveEditedStakeholder}>Save</button>
                 <button onClick={()=>setShowEditStakeholderForm(!showEditStakeholderForm)}>Cancel</button>
@@ -173,11 +232,28 @@ function StakeholderManager() {
             ))}
             <h3>Relationship Owner:</h3>
             <p>{detailStakeholder["relationshipOwner"]}</p>
+            <h3>Email:</h3><p>{detailStakeholder.email}</p>
+            <h3>Phone:</h3><p>{detailStakeholder.phone}</p>
 
+            <div style={{
+              display:"flex", 
+              justifyContent:"space-evenly", 
+              width:"min-content", 
+              marginTop:"1vh"
+            }}>
               <button 
-              style={{width:"min-content", marginTop:"1vh"}}
+              style={{width:"6vw"}}
               onClick={()=>setShowEditStakeholderForm(!showEditStakeholderForm)}
-            >Edit</button>
+              >
+                Edit
+              </button>
+              <button 
+              style={{width:"6vw", marginLeft:"1vw"}}
+              onClick={deleteDetailStakeholder}
+              >
+                Delete
+              </button>
+            </div>
             </>
       }
         </div> 

@@ -102,6 +102,9 @@
 .srm-detail h3, p {
     margin: 0;
 }
+.srm-detail h3 {
+    margin-top: 1vh;
+}
 .srm-detail form {
     display: flex;
     flex-direction: column;

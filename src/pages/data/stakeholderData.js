@@ -7,7 +7,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "tim@apple.com",
+      phone: "0412 345 678"
     },
     {
       name: "Mark Zuckerberg",
@@ -17,7 +19,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "mark@facebook.com",
+      phone: "0412 345 678"
     },
     {
       name: "Jeff Bezos",
@@ -27,7 +31,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "jeff@amazon.com",
+      phone: "0412 345 678"
     },
     {
       name: "Reed Hastings",
@@ -37,7 +43,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "reed@netflix.com",
+      phone: "0412 345 678"
     },
     {
       name: "Ted Sarandos",
@@ -47,7 +55,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "ted@netflix.com",
+      phone: "0412 345 678"
     },
     {
       name: "Sundar Pichai",
@@ -57,7 +67,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "sundar@alphabet.com",
+      phone: "0412 345 678"
     },
     {
       name: "Elon Musk",
@@ -75,7 +87,9 @@ var stakeholders = [
           role: "CEO"
         }
       ],
-      relationshipOwner: "A. N. Other"
+      relationshipOwner: "A. N. Other",
+      email: "elon@tesla.com",
+      phone: "0412 345 678"
     }
 ]
 
@@ -96,6 +110,8 @@ export function blankStakeholder () {
         role: ""
       }
     ],
-    relationshipOwner: ""
+    relationshipOwner: "",
+    email: "",
+    phone: ""
   }
 }
