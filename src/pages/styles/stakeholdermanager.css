@@ -102,16 +102,26 @@
 .srm-detail h3, p {
     margin: 0;
 }
+.srm-detail form {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+.srm-detail form input::placeholder {
+    color:var(--ebony);
+    opacity: 1;
+}
+.srm-detail form input {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    width:15vw;
+    margin: 0.5vh 0;
+    font-size: large;
+    font-family: "Libre Franklin";
+    caret-color: var(--ebony);
+    color:var(--russian-violet);
+}
 
-.edit-button {
-    width:100px;
-    height:100px;
-}
-.edit-button * {
-    width:  100%;
-    height: 100%;
-    fill: var(--platinum);
-}
 
 @media screen and (max-width: 1400px) {
     .srm-add-stakeholder-btns {

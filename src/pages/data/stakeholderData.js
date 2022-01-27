@@ -6,7 +6,8 @@ var stakeholders = [
           name: "Apple",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     },
     {
       name: "Mark Zuckerberg",
@@ -15,7 +16,8 @@ var stakeholders = [
           name: "Facebook",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     },
     {
       name: "Jeff Bezos",
@@ -24,7 +26,8 @@ var stakeholders = [
           name: "Amazon",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     },
     {
       name: "Reed Hastings",
@@ -33,7 +36,8 @@ var stakeholders = [
           name: "Netflix",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     },
     {
       name: "Ted Sarandos",
@@ -42,7 +46,8 @@ var stakeholders = [
           name: "Netflix",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     },
     {
       name: "Sundar Pichai",
@@ -51,7 +56,8 @@ var stakeholders = [
           name: "Alphabet",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     },
     {
       name: "Elon Musk",
@@ -68,13 +74,28 @@ var stakeholders = [
           name: "The Boring Company",
           role: "CEO"
         }
-      ]
+      ],
+      relationshipOwner: "A. N. Other"
     }
 ]
 
 export function generateStakeholderData () {
-  return stakeholders.map((e) => {
-    e.relationshipOwner = "A. N. Other";
-    return e;
-  })
+  for (var index in stakeholders) {
+    stakeholders[index].key = index;
+  }
+  return stakeholders;
+}
+
+export function blankStakeholder () {
+  return {
+    key: -1,
+    name: "",
+    organisations: [
+      {
+        name: "",
+        role: ""
+      }
+    ],
+    relationshipOwner: ""
+  }
 }
