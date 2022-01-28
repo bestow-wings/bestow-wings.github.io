@@ -135,12 +135,12 @@
 }
 
 .titanic-survivor-super {
-  background: linear-gradient(60deg, var(--russian-violet) 10%, var(--viridian-green));
+  background: var(--platinum)
 }
 
 .titanic-survivor-parent {
   display: flex;
-  color: var(--platinum);
+  color: var(--ebony);
   flex-direction: row;
   width:60%;
   margin: auto;
@@ -160,6 +160,7 @@
 .titanic-survivor h2,
 .titanic-survivor h3 {
   text-align: center;
+  color:var(--ebony);
 }
 .titanic-survivor form {
   display: flex;
@@ -174,15 +175,19 @@
   padding: 0.5rem 0.5rem;
   border: none;
 }
+.titanic-survivor form select {
+  background-color: var(--dark-platinum);
+}
 
 .titanic-survivor a {
-  color: var(--platinum);
+  color: var(--ebony);
 }
 
 .titanic-survivor p {
   word-break: normal;
   white-space: normal;
   text-align: justify;
+  color:var(--ebony)
 }
 
 body {

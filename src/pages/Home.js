@@ -4,6 +4,7 @@ import Cards from "../components/Cards"
 import chess_ai_gif from "./img/chess_ai.gif"
 import titanic_img from "./img/titanic.jpg"
 import srm_img from "./img/srm.jpeg"
+import vege_img from "./img/veges.jpg"
 
 const projects = [
   {
@@ -22,17 +23,17 @@ const projects = [
   },
   {
     id: 3, 
-    title: "Stakeholder Relationship Manager (SRM)",
-    description: "A relationship manager that treats stakeholders like people",
+    title: "Stakeholder Manager",
+    description: "Who needs Sales Force?",
     imgsrc:srm_img,
     link: "/stakeholder-manager"
   },
   {
     id: 4, 
-    title: "Project 4",
-    description: "A project",
-    imgsrc:"",
-    link: "/"
+    title: "Shopping List Generator",
+    description: "Pick your meals and get your ingredients sent to you",
+    imgsrc:vege_img,
+    link: "/shopping-list-generator"
   }
 ]
 

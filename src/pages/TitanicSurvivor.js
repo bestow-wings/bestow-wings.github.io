@@ -69,6 +69,10 @@ function TitanicSurvivor() {
 
   return (
     <>
+    <div className="srm-banner">
+        <h1>titanic survivor</h1>
+        <p>Would you survive the Titanic disaster?</p>
+      </div>
     <div className="titanic-survivor-super">
       <div className = 'titanic-survivor-parent'>
         <div className = "titanic-survivor">
@@ -121,7 +125,7 @@ function TitanicSurvivor() {
                   <option value={3}>Southampton</option>
                 </select>
                 <p></p>
-              <button type="submit" value="Submit">Submit</button>
+              <button type="submit" value="Submit" style={{margin:"1vh 0 0 0"}}>Submit</button>
               <p></p>
             </form>
             </div>
@@ -138,6 +142,7 @@ function TitanicSurvivor() {
             from Disaster</a> dataset from Kaggle. This model is about 75% accurate depending
             on the validation dataset. The best models, built by teams of machine learning
             specialists, only get about 81%.</p>
+            <p>⠀</p>
             <p>The source code used to train the model is reproduced below.</p>
             </div>
 
