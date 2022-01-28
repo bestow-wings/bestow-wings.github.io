@@ -167,7 +167,7 @@ function StakeholderManager() {
           </form>
         ) : <button onClick={handleAddStakeholderBtn}>Add Stakeholder</button>}
       </div>
-      <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
+      <div className="srm-content">
       <div className="srm-cards">
         {stakeholderData.map((stakeholder) => (
           <StakeholderCard stakeholder={stakeholder} onClickFunc={setDetailStakeholder}/>

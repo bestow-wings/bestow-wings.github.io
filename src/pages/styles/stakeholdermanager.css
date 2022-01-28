@@ -32,6 +32,12 @@
     justify-content: space-evenly;
 }
 
+.srm-content {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
 .srm-card {
     text-align: center;
     border-radius: 10px;
@@ -89,7 +95,7 @@
     padding: 3vh 2vw;
     border-radius: 15px;
     background-color: var(--russian-violet);
-    width:20vw;
+    width:40vw;
     height: min-content;
     margin: 2vh 0;
 }
@@ -169,12 +175,16 @@
         flex-direction: column;
     }
     .srm-detail {
-        margin: 5vh 5vw;
+        width: 80vw;
+        margin:auto;
     }    
     .srm-functions button {
         margin: 0 0 1vh 0 ;
     }
     .srm-functions form input {
         width:100%;
-    }    
+    }
+    .srm-content {
+        flex-direction: column;
+    }
 }
