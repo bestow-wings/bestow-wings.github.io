@@ -1,8 +1,5 @@
 import "../index.css"
 
-import icon from "../pages/img/magic-book.png"
-/* https://www.flaticon.com/packs/magic-138?style_id=1225&family_id=333&group_id=1837 */
-
 const Hero = () => {
     return (
         <div  className="hero">
@@ -19,7 +16,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-card">
                     <div className="hero-icon">
-                            <img alt="icon" src={icon} height={100} ></img>
+                            🔮
                     </div>
                     <div style={{margin:"auto", paddingLeft:"2rem", paddingRight:"2rem"}}>
                         <h2>Works like magic.</h2>
