@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.6c4bdbe2.chunk.css",
-    "main.js": "/static/js/main.e166cad0.chunk.js",
-    "main.js.map": "/static/js/main.e166cad0.chunk.js.map",
+    "main.css": "/static/css/main.c2c94618.chunk.css",
+    "main.js": "/static/js/main.3c4e71ee.chunk.js",
+    "main.js.map": "/static/js/main.3c4e71ee.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f8eb65d1.js",
     "runtime-main.js.map": "/static/js/runtime-main.f8eb65d1.js.map",
     "static/js/2.de3e1127.chunk.js": "/static/js/2.de3e1127.chunk.js",
     "static/js/2.de3e1127.chunk.js.map": "/static/js/2.de3e1127.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6c4bdbe2.chunk.css.map": "/static/css/main.6c4bdbe2.chunk.css.map",
+    "static/css/main.c2c94618.chunk.css.map": "/static/css/main.c2c94618.chunk.css.map",
     "static/js/2.de3e1127.chunk.js.LICENSE.txt": "/static/js/2.de3e1127.chunk.js.LICENSE.txt",
     "static/media/chess_ai.5d90db09.gif": "/static/media/chess_ai.5d90db09.gif",
-    "static/media/magic-book.51ec30e9.png": "/static/media/magic-book.51ec30e9.png",
     "static/media/srm.63cd02ee.jpeg": "/static/media/srm.63cd02ee.jpeg",
     "static/media/titanic.9f2432de.jpg": "/static/media/titanic.9f2432de.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f8eb65d1.js",
     "static/js/2.de3e1127.chunk.js",
-    "static/css/main.6c4bdbe2.chunk.css",
-    "static/js/main.e166cad0.chunk.js"
+    "static/css/main.c2c94618.chunk.css",
+    "static/js/main.3c4e71ee.chunk.js"
   ]
 }
