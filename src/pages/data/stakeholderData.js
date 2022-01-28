@@ -1,102 +1,32 @@
-var stakeholders = [
-    {
-      name: "Tim Cook",
-      organisations: [
-        {
-          name: "Apple",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "tim@apple.com",
-      phone: "0412 345 678"
-    },
-    {
-      name: "Mark Zuckerberg",
-      organisations: [
-        {
-          name: "Facebook",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "mark@facebook.com",
-      phone: "0412 345 678"
-    },
-    {
-      name: "Jeff Bezos",
-      organisations: [
-        {
-          name: "Amazon",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "jeff@amazon.com",
-      phone: "0412 345 678"
-    },
-    {
-      name: "Reed Hastings",
-      organisations: [
-        {
-          name: "Netflix",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "reed@netflix.com",
-      phone: "0412 345 678"
-    },
-    {
-      name: "Ted Sarandos",
-      organisations: [
-        {
-          name: "Netflix",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "ted@netflix.com",
-      phone: "0412 345 678"
-    },
-    {
-      name: "Sundar Pichai",
-      organisations: [
-        {
-          name: "Alphabet",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "sundar@alphabet.com",
-      phone: "0412 345 678"
-    },
-    {
-      name: "Elon Musk",
-      organisations: [
-        {
-          name: "Tesla",
-          role: "CEO"
-        },
-        {
-          name: "Spacex",
-          role: "CEO"
-        },
-        {
-          name: "The Boring Company",
-          role: "CEO"
-        }
-      ],
-      relationshipOwner: "A. N. Other",
-      email: "elon@tesla.com",
-      phone: "0412 345 678"
-    }
-]
+const {faker } = require('@faker-js/faker');
+faker.locale = 'en_AU_ocker';
 
 export function generateStakeholderData () {
-  for (var index in stakeholders) {
-    stakeholders[index].key = index;
+  var stakeholders = []
+
+  for (let i = 0; i < faker.datatype.number({min: 3, max:10}); i++) {
+    let fn = faker.name.firstName();
+    let ln = faker.name.lastName();
+    let cn = faker.company.companyName();
+
+    let orgs = [{ name: cn, role: faker.name.jobTitle()}];
+    for (let i = 0; i < faker.datatype.number(2); i++) {
+      orgs.push({
+        name: faker.company.companyName(),
+        role: faker.name.jobTitle()
+      })
+    }
+
+    stakeholders.push({
+      key: i,
+      name: fn + " " + ln,
+      organisations: orgs,
+      relationshipOwner: faker.name.firstName() + " " + faker.name.lastName(),
+      email: fn + "." + ln + "@" + cn.split(" ")[0].split(",")[0].toLowerCase() + ".com",
+      phone: faker.phone.phoneNumber()
+    })
   }
+
   return stakeholders;
 }
 

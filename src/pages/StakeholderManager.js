@@ -167,12 +167,12 @@ function StakeholderManager() {
           </form>
         ) : <button onClick={handleAddStakeholderBtn}>Add Stakeholder</button>}
       </div>
+      <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
       <div className="srm-cards">
         {stakeholderData.map((stakeholder) => (
           <StakeholderCard stakeholder={stakeholder} onClickFunc={setDetailStakeholder}/>
         ))}
       </div>
-      
         <div className = "srm-detail">
             <div className="srm-detail-form">
             {showEditStakeholderForm ? (
@@ -228,7 +228,7 @@ function StakeholderManager() {
             <>
             <h1>{detailStakeholder.name}</h1>
             {detailStakeholder.organisations.map((o) => (
-              <h2>{o.name}, {o.role}</h2>
+              <h2>{o.role} at {o.name}</h2>
             ))}
             <h3>Relationship Owner:</h3>
             <p>{detailStakeholder["relationshipOwner"]}</p>
@@ -257,6 +257,7 @@ function StakeholderManager() {
             </>
       }
         </div> 
+      </div>
       </div>
     </>
   );

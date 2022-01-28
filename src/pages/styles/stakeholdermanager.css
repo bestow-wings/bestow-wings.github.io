@@ -27,14 +27,19 @@
     margin-top:2vh;
 }
 
+.srm-add-stakeholder-btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .srm-card {
     text-align: center;
     border-radius: 10px;
-    width: 10vw;
+    width: 30vw;
     color: var(--russian-violet);
     background-color: var(--bittersweet);
     box-shadow: 5px 10px 0px var(--russian-violet);
-    margin: 10px 10px;
+    margin: 1vh 1vh;
     padding: 0 0 2vh 0;
 }
 .srm-card:hover {
@@ -49,10 +54,11 @@
 
 .srm-cards {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    padding-top:2rem;
+    padding-top: 1vh;
     flex-wrap: wrap;
+    margin: 0 3vh;
 }
 .srm-cards h3, .srm-cards p {
     color: var(--russian-violet);
@@ -76,19 +82,16 @@
     width:15vw;
     margin: 0.5vh 0.5vh;
 }
-.srm-add-stakeholder-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1vh;
-}
 
 .srm-detail {
     display: flex;
     flex-direction: column;
-    margin: 5vh 20vw;
-    padding: 3vh 5vw;
+    padding: 3vh 2vw;
     border-radius: 15px;
     background-color: var(--russian-violet);
+    width:20vw;
+    height: min-content;
+    margin: 2vh 0;
 }
 .srm-detail h1, h2, h3, p{
     color: var(--platinum)

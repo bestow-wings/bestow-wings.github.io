@@ -6,7 +6,7 @@ const StakeholderCard = ({ stakeholder, onClickFunc}) => {
             <h3>{stakeholder.name}</h3>
             {stakeholder.organisations.map((e) =>
               <>
-                 <p>{e.name}, {e.role}</p>
+                 <p>{e.role} at {e.name}</p>
               </>
             )}
           </div>

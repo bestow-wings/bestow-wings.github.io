@@ -3,6 +3,7 @@ import Hero from "../components/Hero"
 import Cards from "../components/Cards"
 import chess_ai_gif from "./img/chess_ai.gif"
 import titanic_img from "./img/titanic.jpg"
+import srm_img from "./img/srm.jpeg"
 
 const projects = [
   {
@@ -23,7 +24,7 @@ const projects = [
     id: 3, 
     title: "Stakeholder Relationship Manager (SRM)",
     description: "A relationship manager that treats stakeholders like people",
-    imgsrc:"",
+    imgsrc:srm_img,
     link: "/stakeholder-manager"
   },
   {
