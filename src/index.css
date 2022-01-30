@@ -127,11 +127,13 @@
 }
 .card-text {
   background: linear-gradient(rgba(50, 144, 143,1.0), rgba(50, 144, 143,0.9), rgba(50, 144, 134,0.6));
-  color: var(--platinum);
   text-align: center;
   height: 380px;
   border-radius: 5px;
   padding-top:20px;
+}
+.card-text p, .card-text h3 {
+  color: var(--platinum);
 }
 
 .titanic-survivor-super {

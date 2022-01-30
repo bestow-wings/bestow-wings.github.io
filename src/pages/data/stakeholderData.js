@@ -35,14 +35,43 @@ export function generateStakeholderData () {
       return new Date(a.date) - new Date(b.date);
     })
 
+    let interactions = [];
+    for (let i = 0; i < faker.datatype.number(10); i++) {
+      interactions.push({
+        name: faker.name.findName(),
+        date: faker.date.past(2),
+        type: faker.helpers.randomize([
+          "Email", 
+          "Face to Face Meeting", 
+          "Virtual Meeting",
+          "Phone Call"]),
+        notes: faker.helpers.randomize([
+          "Discussed ",
+          "Covered ",
+          "Made a decision on ",
+          "Thought about ",
+          "Meditated on ",
+          "Picked their brains about "
+        ]) + 
+        faker.company.catchPhraseDescriptor() + " " +
+        faker.company.catchPhraseNoun() + "."
+      })
+    }
+    interactions.sort(function(a,b) {
+      return new Date(a.date) - new Date(b.date);
+    })
+
+
     stakeholders.push({
       key: i,
+      profilePhoto: faker.image.avatar(),
       name: fn + " " + ln,
       organisations: orgs,
       relationshipOwner: faker.name.firstName() + " " + faker.name.lastName(),
       email: fn + "." + ln + "@" + cn.split(" ")[0].split(",")[0].toLowerCase() + ".com",
       phone: faker.phone.phoneNumber(),
       meetings: meetings,
+      interactions: interactions,
     })
   }
 
@@ -61,6 +90,8 @@ export function blankStakeholder () {
     ],
     relationshipOwner: "",
     email: "",
-    phone: ""
+    phone: "",
+    meetings: [],
+    interactions: []
   }
 }

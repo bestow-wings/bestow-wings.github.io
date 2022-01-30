@@ -4,6 +4,7 @@ import { generateStakeholderData, blankStakeholder } from './data/stakeholderDat
 import StakeholderCard from "../components/StakeholderCard"
 
 import "./styles/stakeholdermanager.css"
+import { io } from '@tensorflow/tfjs';
 
 function StakeholderManager() {
 
@@ -18,6 +19,11 @@ function StakeholderManager() {
   const [showEditStakeholderForm, setShowEditStakeholderForm] = useState(false);
 
   const handleChangeEmail = (event) => {setEmail(event.target.value);}
+
+  const handleSetDetailStakeholder = (s) => {
+    setDetailStakeholder(s);
+    setShowEditStakeholderForm(false);
+  }
 
   const handleChangeNewStakeholder = (e) => {
     if (e.target.placeholder.toLowerCase() === "organisation") {
@@ -91,22 +97,6 @@ function StakeholderManager() {
     setNewStakeholder(blankStakeholder());
   }
 
-  const deleteDetailStakeholder = (event) => {
-    const delKey = detailStakeholder.key;
-    var newData = stakeholderData;
-
-    for (let i = 0; i < newData.length; i++) {
-      console.log(newData[i].key, delKey)
-      if (newData[i].key === delKey) {
-        newData.splice(delKey, 1);
-        break;
-      }
-    }
-    setStakeholderData(newData);
-    setDetailStakeholder(stakeholderData[0])
-  }
-
-
   return (
     <>
       <div className="srm-banner">
@@ -121,6 +111,8 @@ function StakeholderManager() {
           <button type="submit" value="Submit">Submit</button>
         </form>
       </div>
+      <div className="srm-content">
+      <div className="srm-cards">
       <div className="srm-functions">
         {showAddStakeholderForm ? (
           <form onSubmit={addStakeholder}>
@@ -165,15 +157,38 @@ function StakeholderManager() {
               <button onClick={handleAddStakeholderBtn}>Cancel</button>
             </div>
           </form>
-        ) : <button onClick={handleAddStakeholderBtn}>Add Stakeholder</button>}
+        ) : <button onClick={handleAddStakeholderBtn}>New Stakeholder</button>}
       </div>
-      <div className="srm-content">
-      <div className="srm-cards">
+
         {stakeholderData.map((stakeholder) => (
-          <StakeholderCard stakeholder={stakeholder} onClickFunc={setDetailStakeholder}/>
+          <StakeholderCard stakeholder={stakeholder} onClickFunc={handleSetDetailStakeholder}/>
         ))}
       </div>
         <div className = "srm-detail">
+        <div style={{display:"flex", flexDirection:"row", margin:"0 0 20px 0"}}>
+              <div 
+              >
+                <img 
+                  style={{
+                    borderRadius:"50%", 
+                    borderColor:"var(--bittersweet)", 
+                    borderWidth:"5px",
+                    borderStyle:"solid",
+                    boxShadow:"5px 10px 0px var(--viridian-green)"}
+                  }
+                  src={detailStakeholder.profilePhoto}
+                ></img>
+              </div>
+              <div style={{margin:"auto 0 auto 50px"}}>
+                <h1> {detailStakeholder.name} </h1>
+                <button 
+              style={{width:"min-content"}}
+              onClick={()=>setShowEditStakeholderForm(!showEditStakeholderForm)}
+              >
+                Edit
+              </button>
+              </div>
+            </div>
             <div className="srm-detail-form">
             {showEditStakeholderForm ? (
             <form>
@@ -226,10 +241,9 @@ function StakeholderManager() {
             </form>
             ) : 
             <>
-            <h1>{detailStakeholder.name}</h1>
             {detailStakeholder.organisations.map((o) => (
-              <h2>{o.role} at {o.name}</h2>
-            ))}
+                  <h2>{o.role} at {o.name}</h2>
+                ))}
             <h3>Relationship Owner:</h3>
             <p>{detailStakeholder["relationshipOwner"]}</p>
             <h3>Email:</h3><p>{detailStakeholder.email}</p>
@@ -239,7 +253,23 @@ function StakeholderManager() {
               <p>None</p>
             ) : (
             detailStakeholder.meetings.map((m) => (
-              <p><i>{m.title}</i> with {m.owner} on {m.date.toDateString()}</p>
+              <p><i>{m.title}</i> with {m.owner} on {m.date.toDateString()}.</p>
+            )))}
+            <h3>Past Interactions:</h3>
+            {detailStakeholder.interactions.length < 1 ? (
+              <p>None</p>
+            ) : (
+            detailStakeholder.interactions.map((i) => (
+              <div style={{
+                borderStyle:"solid", 
+                borderWidth:"0 0 0 10px", 
+                borderColor:"var(--viridian-green)",
+                padding: "0 0 0 5px",
+                margin: "15px 0 15px 0"
+                }}>
+              <p><b>{i.type} with {i.name} on {i.date.toDateString()}</b></p>
+              <p>{i.notes}</p>
+              </div>
             )))}
             <div style={{
               display:"flex", 
@@ -247,18 +277,6 @@ function StakeholderManager() {
               width:"min-content", 
               marginTop:"1vh"
             }}>
-              <button 
-              style={{width:"6vw"}}
-              onClick={()=>setShowEditStakeholderForm(!showEditStakeholderForm)}
-              >
-                Edit
-              </button>
-              <button 
-              style={{width:"6vw", marginLeft:"1vw"}}
-              onClick={deleteDetailStakeholder}
-              >
-                Delete
-              </button>
             </div>
             </>
       }

@@ -137,7 +137,7 @@ function TitanicSurvivor() {
         <div className = "titanic-survivor">
           <h1>Why is this interesting?</h1>
           <p>This relies on a machine learning algorithm built natively in JavaScript using 
-            TensorFlowJS. It was trained on the
+            TensorFlowJS. It was trained on the 
             <a href="https://www.kaggle.com/c/titanic/data"> Titanic - Machine Learning 
             from Disaster</a> dataset from Kaggle. This model is about 75% accurate depending
             on the validation dataset. The best models, built by teams of machine learning
