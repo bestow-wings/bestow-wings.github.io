@@ -41,7 +41,7 @@
 .srm-card {
     text-align: center;
     border-radius: 10px;
-    width: 30vw;
+    width: 700px;
     color: var(--russian-violet);
     background-color: var(--bittersweet);
     box-shadow: 5px 10px 0px var(--russian-violet);
@@ -95,7 +95,7 @@
     padding: 3vh 2vw;
     border-radius: 15px;
     background-color: var(--russian-violet);
-    width:40vw;
+    width:800px;
     height: min-content;
     margin: 2vh 0;
 }

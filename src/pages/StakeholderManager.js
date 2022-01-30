@@ -234,7 +234,13 @@ function StakeholderManager() {
             <p>{detailStakeholder["relationshipOwner"]}</p>
             <h3>Email:</h3><p>{detailStakeholder.email}</p>
             <h3>Phone:</h3><p>{detailStakeholder.phone}</p>
-
+            <h3>Upcoming Meetings:</h3>
+            {detailStakeholder.meetings.length < 1 ? (
+              <p>None</p>
+            ) : (
+            detailStakeholder.meetings.map((m) => (
+              <p><i>{m.title}</i> with {m.owner} on {m.date.toDateString()}</p>
+            )))}
             <div style={{
               display:"flex", 
               justifyContent:"space-evenly", 

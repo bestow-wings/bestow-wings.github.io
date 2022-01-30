@@ -3,7 +3,7 @@ import Hero from "../components/Hero"
 import Cards from "../components/Cards"
 import chess_ai_gif from "./img/chess_ai.gif"
 import titanic_img from "./img/titanic.jpg"
-import srm_img from "./img/srm.jpeg"
+import srm_img from "./img/srm_small.jpeg"
 import vege_img from "./img/veges.jpg"
 
 const projects = [
