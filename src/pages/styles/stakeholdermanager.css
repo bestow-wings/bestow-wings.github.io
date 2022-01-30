@@ -30,8 +30,8 @@
 .srm-add-stakeholder-btns {
     display: flex;
     justify-content: space-evenly;
+    margin: 20px 0 0 0;
 }
-
 .srm-content {
     display:flex;
     flex-direction:row;
@@ -77,15 +77,27 @@
     margin: 0 auto;
 }
 .srm-functions form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border-width: thick;
+    border-style: solid;
+    border-color: var(--bittersweet);
+    width: 700px;
+    color: var(--russian-violet);
+    background-color: var(--platinum);
+    box-shadow: 5px 10px 0px var(--russian-violet);
+    margin: 1vh 1vh;
+    padding: 30px 0 2vh 0;
 }
 .srm-functions form input {
     padding: 0.5rem 0.5rem;
     border: none;
     width:15vw;
-    margin: 0.5vh 0.5vh;
+    margin: 0.5vh 0;
+    font-size: large;
+    font-family: "Libre Franklin";
+    caret-color: var(--ebony);
+    color:var(--russian-violet);
 }
 
 .srm-detail {
@@ -114,9 +126,17 @@
     margin-top: 1vh;
 }
 .srm-detail form {
-    display: flex;
-    flex-direction: column;
-    width: min-content;
+    text-align: center;
+    border-radius: 10px;
+    border-width: thick;
+    border-style: solid;
+    border-color: var(--bittersweet);
+    width: 700px;
+    color: var(--russian-violet);
+    background-color: var(--platinum);
+    box-shadow: 5px 10px 0px var(--russian-violet);
+    margin: 1vh 1vh;
+    padding: 30px 0 2vh 0;
 }
 .srm-detail form input::placeholder {
     color:var(--ebony);
@@ -132,7 +152,20 @@
     caret-color: var(--ebony);
     color:var(--russian-violet);
 }
-
+.srm-detail-interaction {
+    border-style: solid;
+    border-width:0 0 0 10px;
+    border-color: var(--viridian-green);
+    padding: 0 15px 0 5px;
+    margin: 15px 0 15px 0;
+    width: max-content;
+}
+.srm-detail-interaction:hover {
+    box-shadow: 10px 15px 0px var(--viridian-green);
+    transform: translateY(-4px);
+    cursor: pointer;
+    border-width:0;
+}
 
 @media screen and (max-width: 1400px) {
     .srm-add-stakeholder-btns {

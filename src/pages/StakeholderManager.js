@@ -166,8 +166,7 @@ function StakeholderManager() {
       </div>
         <div className = "srm-detail">
         <div style={{display:"flex", flexDirection:"row", margin:"0 0 20px 0"}}>
-              <div 
-              >
+              <div>
                 <img 
                   style={{
                     borderRadius:"50%", 
@@ -260,15 +259,9 @@ function StakeholderManager() {
               <p>None</p>
             ) : (
             detailStakeholder.interactions.map((i) => (
-              <div style={{
-                borderStyle:"solid", 
-                borderWidth:"0 0 0 10px", 
-                borderColor:"var(--viridian-green)",
-                padding: "0 0 0 5px",
-                margin: "15px 0 15px 0"
-                }}>
-              <p><b>{i.type} with {i.name} on {i.date.toDateString()}</b></p>
-              <p>{i.notes}</p>
+              <div className="srm-detail-interaction">
+                <p><b>{i.type} with {i.name} on {i.date.toDateString()}</b></p>
+                <p>{i.notes}</p>
               </div>
             )))}
             <div style={{
